@@ -1,11 +1,16 @@
 import React from 'react';
+import Title from "./HelloWorld"
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Title></Title>
+      <Title></Title>
+      <Title></Title>
     </div>
   );
 }
+
+
 
 export default App;
