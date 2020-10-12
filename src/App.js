@@ -1,21 +1,35 @@
 import React from "react";
+import Membro from "./Membro";
+import Title from "./Title";
+const braga = {
+  nome: "Arthur Braga",
+  idade: 19,
+  cargo: "Gerente de produtos",
+  curso: "Engenharia de Sistemas",
+};
+
+const lima = {
+  nome: "Arthur Lima",
+  idade: 19,
+  cargo: "Gerente scrum",
+  curso: "Engenharia Elétrica",
+};
+
+const joaozinho = {
+  nome: "Johnny Ferreira",
+  idade: 19,
+  cargo: "Gerente scrum",
+  curso: "Engenharia Controle e Automação",
+};
 
 function App() {
-  let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  function clicou() {
-    numeros = numeros.map((elemento) => {
-      return elemento*2;
-    });
-    console.log(numeros);
-    //numeros.forEach((elemento) =>{
-    //  console.log(elemento);
-    //});
-  }
   return (
     <div>
-      <h1> Hello World!</h1>
-      <h1>{numeros[2]}</h1>
-      <button onClick={() => clicou(20)}>+ um</button>
+      <Title title="Membros" subtitle="Legais">
+        <Membro membro={braga} />
+        <Membro membro={lima} />
+        <Membro membro={joaozinho} />
+      </Title>
     </div>
   );
 }
