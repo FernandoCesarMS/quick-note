@@ -1,18 +1,21 @@
 import React from "react";
 
 function App() {
-  const frase = "Hello World!";
-  var numero = 40;
-  function clicou(exibicao) {
-    alert(exibicao * 10);
+  let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  function clicou() {
+    numeros = numeros.map((elemento) => {
+      return elemento*2;
+    });
+    console.log(numeros);
+    //numeros.forEach((elemento) =>{
+    //  console.log(elemento);
+    //});
   }
   return (
     <div>
-      <h1>
-        {frase} {numero + 1}
-      </h1>
-      <button onClick={() => clicou(20)}>20</button>
-      <button onClick={() => clicou(100)}>100</button>
+      <h1> Hello World!</h1>
+      <h1>{numeros[2]}</h1>
+      <button onClick={() => clicou(20)}>+ um</button>
     </div>
   );
 }
